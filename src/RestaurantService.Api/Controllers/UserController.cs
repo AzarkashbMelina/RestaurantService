@@ -16,12 +16,12 @@ public class UserController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet]
-    public async Task<IActionResult> GetById([FromQuery] int id)
-    {
-        if (id <= 0)
-        {
-            return result
-        }
-    }
+    //[HttpGet]
+    //public async Task<IActionResult> GetById([FromQuery] int id)
+    //{
+    //    if (id <= 0)
+    //    {
+    //        return result
+    //    }
+    //}
 }
