@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantService.Domain\RestaurantService.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\Security\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Features\Orders\Commands\" />
+    <Folder Include="Features\Orders\EventHandlers\" />
+    <Folder Include="Features\Orders\Queries\" />
+    <Folder Include="Features\Restaurants\Commands\" />
+    <Folder Include="Features\Restaurants\EventHandlers\" />
+    <Folder Include="Features\Restaurants\Queries\" />
+  </ItemGroup>
+
+</Project>
