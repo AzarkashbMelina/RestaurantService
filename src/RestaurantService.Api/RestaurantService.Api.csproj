@@ -8,10 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.9" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\RestaurantService.Application\RestaurantService.Application.csproj" />
+    <ProjectReference Include="..\RestaurantService.Infrastructure\RestaurantService.Infrastructure.csproj" />
+    <ProjectReference Include="..\RestaurantService.Persistence\RestaurantService.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿using RestaurantService.Domain.Common.Abstractions;
+﻿using RestaurantService.Domain.Abstractions;
 using RestaurantService.Domain.Enums;
 using System.ComponentModel.DataAnnotations;
 namespace RestaurantService.Domain.Identity;

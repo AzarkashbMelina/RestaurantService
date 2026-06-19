@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RestaurantService.Application.Common.Results;
 using RestaurantService.Application.Contracts;
 
 namespace RestaurantService.Api.Controllers;
@@ -16,12 +17,23 @@ public class UserController : ControllerBase
         _logger = logger;
     }
 
-    //[HttpGet]
-    //public async Task<IActionResult> GetById([FromQuery] int id)
-    //{
-    //    if (id <= 0)
-    //    {
-    //        return result
-    //    }
-    //}
+    [HttpGet]
+    public async Task<IActionResult> GetById([FromQuery] int id)
+    {
+        if (id <= 0)
+        {
+            return Result.Failure(Error.UserNotFound).ToActionResult();
+        }
+
+        var user = await _userService.GetById(id);
+
+        if(user is not null)
+        {
+            return Result.Success(user).ToActionResult();
+        }
+        else
+        {
+            return Result.Failure(Error.UserNotFound).ToActionResult();
+        }
+    }
 }

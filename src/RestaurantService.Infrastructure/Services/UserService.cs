@@ -15,16 +15,20 @@ public class UserService : IUserService
     public async Task ApproveByAdmin(int id, CancellationToken ct = default)
     {
         User user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
-        user.ApproveByAdmin();
+        user.ApproveUser();
     }
 
-    public Task<User> GetById(int id, CancellationToken ct = default)
+    public async Task<User> GetById(int id, CancellationToken ct = default)
     {
-        throw new NotImplementedException();
+        return await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
     }
 
-    public Task<int> Register(string phoneNumber, CancellationToken ct = default)
+    public async Task<int> Register(string phoneNumber, CancellationToken ct = default)
     {
-        throw new NotImplementedException();
+        User user = User.Register("Fname", "Lname", "phoneNumber", "nc");
+
+        _dbContext.Users.Add(user);
+        await _dbContext.SaveChangesAsync(ct);
+        return user.Id;
     }
 }
