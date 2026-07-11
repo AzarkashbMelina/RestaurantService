@@ -1,5 +1,7 @@
-﻿namespace RestaurantService.Domain.Orders;
+﻿using RestaurantService.Domain.Base;
 
-public class OrderItem
+namespace RestaurantService.Domain.Orders;
+
+public class OrderItem : Entity
 {
 }

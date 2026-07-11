@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RestaurantService.Domain.Base
+namespace RestaurantService.Domain.Base;
+
+public class Entity
 {
-    internal class Entity
-    {
-    }
 }
