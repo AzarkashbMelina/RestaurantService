@@ -1,6 +1,6 @@
 ﻿using RestaurantService.Domain.Abstractions;
 
-namespace RestaurantService.Domain.Restaurants;
+namespace RestaurantService.Domain.FoodAggregate;
 
 public class Food : ICreatable
 {
