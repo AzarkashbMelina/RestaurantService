@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace RestaurantService.Domain.Base;
 
-namespace RestaurantService.Domain.Base
+public class AggregateRoot
 {
-    internal class AggregateRoot
-    {
-    }
 }

@@ -1,8 +1,9 @@
 ﻿using RestaurantService.Domain.Abstractions;
+using RestaurantService.Domain.Base;
 
 namespace RestaurantService.Domain.FoodAggregate;
 
-public class Food : ICreatable
+public class Food :AggregateRoot, IAuditableEntity
 {
     public DateTime? CreatedAt { get; set; }
     public string Name { get; set; }

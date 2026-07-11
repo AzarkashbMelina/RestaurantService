@@ -1,7 +1,8 @@
-﻿using RestaurantService.Domain.Identity;
+﻿using RestaurantService.Domain.Base;
+using RestaurantService.Domain.Identity;
 
 namespace RestaurantService.Domain.Customers;
 //user class should inherit from entity(base class) and IAggregateRoot
-internal class Customer : User
+internal class Customer : AggregateRoot
 {
 }

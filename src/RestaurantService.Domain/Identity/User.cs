@@ -3,7 +3,7 @@ using RestaurantService.Domain.Enums;
 using System.ComponentModel.DataAnnotations;
 namespace RestaurantService.Domain.Identity;
 
-public class User : ICreatable
+public class User : 
 {
     public static User Register(string firstName, string lastName, string phone, string nationalCode)
     {
