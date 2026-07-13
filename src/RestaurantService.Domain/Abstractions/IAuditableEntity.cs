@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace RestaurantService.Domain.Abstractions;
 
-namespace RestaurantService.Domain.Abstractions
+public interface IAuditableEntity
 {
-    internal interface IAuditableEntity
-    {
-    }
+    DateTime CreatedAt { get; }
+    //string? CreatedBy { get; }
+    DateTime? LastModifiedAt { get; }
+    //string LastModifiedBy { get; }
 }
