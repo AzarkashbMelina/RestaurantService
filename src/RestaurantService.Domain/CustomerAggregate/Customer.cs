@@ -4,7 +4,7 @@ using RestaurantService.Domain.Identity;
 
 namespace RestaurantService.Domain.Customers;
 //user class should inherit from entity(base class) and IAggregateRoot
-public class Customer : AggregateRoot, IAuditableEntity
+public class Customer : AggregateRoot, IAuditable
 {
     public int CustomerId { get; set; }
     public int UserId { get; set; }

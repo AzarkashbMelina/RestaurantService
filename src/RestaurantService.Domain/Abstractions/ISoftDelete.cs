@@ -2,8 +2,7 @@
 
 public interface ISoftDelete
 {
-    bool IsDeleted { get; set; }
-    DateTime? DeletedAt { get; set; }
-    
-    //DeletedBy
+    bool IsDeleted { get; }
+    DateTime? DeletedAt { get; }
+    Guid? DeletedBy { get; }
 }

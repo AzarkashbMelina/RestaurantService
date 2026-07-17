@@ -1,5 +1,10 @@
-﻿namespace RestaurantService.Domain.Base;
+﻿using RestaurantService.Domain.Abstractions;
 
-public class AggregateRoot
+namespace RestaurantService.Domain.Base;
+
+public abstract class AggregateRoot : Entity, IAggregateRoot
 {
+    protected AggregateRoot() //it will generate guid v7 from entity base class
+    { 
+    }
 }

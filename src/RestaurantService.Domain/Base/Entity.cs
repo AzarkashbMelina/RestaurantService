@@ -1,9 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using RestaurantService.Domain.Abstractions;
 
 namespace RestaurantService.Domain.Base;
 
-public class Entity
+public abstract class Entity : IEntity
 {
+    protected Entity()
+    {
+        Id = Guid.CreateVersion7();
+    }
+
+    public Guid Id { get; private set; }    
 }

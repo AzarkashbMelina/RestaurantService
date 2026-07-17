@@ -6,7 +6,7 @@ using System.Text;
 
 namespace RestaurantService.Domain.BasketAggregate
 {
-    public class Basket : AggregateRoot, IAuditableEntity
+    public class Basket : AggregateRoot, IAuditable
     {
 
     }    
