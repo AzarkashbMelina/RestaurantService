@@ -4,7 +4,7 @@ using RestaurantService.Domain.Shared.ValueObjects;
 
 namespace RestaurantService.Domain.Restaurants;
 //it should inherit from entity(base class) and IAggregateRoot
-public class Restaurant : AggregateRoot, IAuditable
+public class Restaurant : AggregateRoot, IAuditableEntity
 {
     public string Name { get; set; }
     public string Category { get; set; }

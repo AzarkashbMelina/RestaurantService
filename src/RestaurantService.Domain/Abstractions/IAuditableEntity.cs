@@ -1,6 +1,6 @@
 ﻿namespace RestaurantService.Domain.Abstractions;
 
-public interface IAuditable
+public interface IAuditableEntity
 {
     DateTime CreatedAt { get; }
     Guid CreatedBy { get; }

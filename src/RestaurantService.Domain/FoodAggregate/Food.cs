@@ -3,7 +3,7 @@ using RestaurantService.Domain.Base;
 
 namespace RestaurantService.Domain.FoodAggregate;
 
-public class Food :AggregateRoot, IAuditable
+public class Food :AggregateRoot, IAuditableEntity
 {
     public DateTime? CreatedAt { get; set; }
     public string Name { get; set; }
